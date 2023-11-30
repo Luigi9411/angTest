@@ -1,0 +1,20 @@
+<h1>RICERCA</h1>
+<input [(ngModel)]="term" (keyup)="onSearch()">
+<div *ngIf="clientiList.length > 0">
+
+  <table *ngIf="clientiList.length > 0">
+    <tr>
+      <th>Ragione Sociale</th>
+      <th>Id Agente</th>
+      <th>Pagina cliente</th>
+    </tr>
+    <tr *ngFor="let client of clientiList">
+      <td>{{ client.ragionesociale }}</td>
+      <td>{{ client.idAgente }}</td>
+      <td><a  aria-current="" href="#" routerLink="/cliente">Entra</a></td>
+    </tr>
+  </table>
+  <div *ngIf="clientiList.length === 0">
+    <p>No clients found.</p>
+  </div>
+

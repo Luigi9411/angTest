@@ -1,0 +1,42 @@
+<!-- <div class="container container-login">
+  <div class="row row-login">
+    <h2>Accesso Agenti</h2>
+    <div class="col-12">
+      <form #frm="ngForm" (submit)="InsertForm(frm)" ngClass="{error: frm.invalid && frm.dirty}">
+        <div class="form-group mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input #emailAddressref="ngModel" #userref type="email" class="form-control" name="emailAddress" [ngModel]="singleNames?.emailAddress" id="exampleInputEmail1" required >
+         <div *ngIf="emailAddressref.errors?.['pattern']" class="form-text">The Email Address is in an invalid format</div> -->
+          <!-- <div *ngIf="emailAddressref.errors?.['required']" class="form-text">The Email Address is required</div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input #passwordref="ngModel" #pwdref type="password" class="form-control" name="password" [ngModel]="singleNames?.password" required >
+          <div *ngIf="passwordref.errors?.['required']" class="form-text">The password is required </div>
+        </div>
+        <button type="submit" (click)="GetCredentials(userref, pwdref)" [disabled]="frm.invalid" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="alert" *ngIf="showAlert">
+  Login successful !!!
+</div>
+<div class="alert" *ngIf="showAlert2">
+  Invalid Email or Password
+</div>
+<div class="alert" *ngIf="showAlert3">
+  You are registered as an old user. To continue register again with the same Email and password.
+</div> -->
+
+<div>
+  <label for="username">Username:</label>
+  <input id="username" [(ngModel)]="username" name="username">
+
+  <label for="password">Password:</label>
+  <input id="password" [(ngModel)]="password" name="password" type="password">
+
+  <button (click)="onLogin()">Login</button>
+</div>
+
