@@ -1,1 +1,19 @@
-<p>cliente works!</p>
+
+<table *ngIf="clienteDetails">
+  <tr>
+    <th>Ragione Sociale</th>
+    <th>Id Agente</th>
+    <th>Indirizzo</th>
+    <th>CAP</th>
+    <th>Città</th>
+    <th>Prov</th>
+  </tr>
+  <tr>
+    <td>{{ clienteDetails.ragionesociale }}</td>
+    <td>{{ clienteDetails.idAgente }}</td>
+    <td>{{ clienteDetails.indirizzo }}</td>
+    <td>{{ clienteDetails.cap }}</td>
+    <td>{{ clienteDetails.citta }}</td>
+    <td>{{ clienteDetails.prov }}</td>
+  </tr>
+</table>

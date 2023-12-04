@@ -11,7 +11,7 @@
     <tr *ngFor="let client of clientiList">
       <td>{{ client.ragionesociale }}</td>
       <td>{{ client.idAgente }}</td>
-      <td><a  aria-current="" href="#" routerLink="/cliente">Entra</a></td>
+      <a *ngIf="client.idAgente" (click)="onClientClick(client.idAgente.toString())" aria-current="" href="#" routerLink="/cliente">Entra</a>
     </tr>
   </table>
   <div *ngIf="clientiList.length === 0">
